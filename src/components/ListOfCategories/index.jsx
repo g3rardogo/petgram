@@ -2,18 +2,25 @@ import React, { useEffect, useState } from "react";
 import { Category } from "../Category";
 import { List, Item } from "./styles";
 
-export const ListOfCategories = () => {
+function useCategoriesData() {
   const [categories, setCategories] = useState([]);
-  const [showFixed, setShowFixed] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(async () => {
+    setLoading(true);
     const response = await fetch(
       "https://petgram-api-g3rardogo.vercel.app/categories"
     );
     const data = await response.json();
     setCategories(data);
+    setLoading(false);
   }, []);
+  return { categories, loading };
+}
 
+export const ListOfCategories = () => {
+  const [showFixed, setShowFixed] = useState(false);
+  const { categories, loading } = useCategoriesData();
   useEffect(
     function () {
       const onScroll = (e) => {
@@ -29,14 +36,19 @@ export const ListOfCategories = () => {
 
   const renderList = (fixed) => (
     <List fixed={fixed}>
-      {categories.map((category) => (
-        <Item>
-          <Category key={category.id} {...category} />
+      {loading ? (
+        <Item key="loading">
+          <Category />
         </Item>
-      ))}
+      ) : (
+        categories.map((category) => (
+          <Item key={category.id}>
+            <Category {...category} />
+          </Item>
+        ))
+      )}
     </List>
   );
-
   return (
     <>
       {renderList()}
