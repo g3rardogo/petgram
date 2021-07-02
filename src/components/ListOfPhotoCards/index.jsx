@@ -1,11 +1,20 @@
 import React from "react";
+import { useQuery } from "@apollo/client";
 import { PhotoCard } from "../PhotoCard";
+import { withPhotos } from "../../hoc/withPhotos";
 
-export const ListOfPhotoCards = () => {
+export const ListOfPhotoCards = ({ categoryId }) => {
+  const { loading, error, data } = useQuery(withPhotos, {
+    variables: { categoryId },
+  });
+
+  if (loading) return <span>loading</span>;
+  if (error) return <p>Error</p>;
+
   return (
     <ul>
-      {[1, 2, 3, 4, 5, 6, 7].map((id) => (
-        <PhotoCard key={id} id={id} />
+      {data.photos.map((photoCard) => (
+        <PhotoCard key={photoCard.id} {...photoCard} />
       ))}
     </ul>
   );
