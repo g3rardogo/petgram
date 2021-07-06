@@ -4,6 +4,7 @@ module.exports = {
   entry: ["babel-polyfill", "./src/index.jsx"],
   output: {
     filename: "app.bundle.js",
+    publicPath: "/",
   },
   resolve: {
     extensions: [".js", ".jsx"],
@@ -26,5 +27,8 @@ module.exports = {
         },
       },
     ],
+  },
+  devServer: {
+    historyApiFallback: true,
   },
 };
