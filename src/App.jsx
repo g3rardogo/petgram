@@ -9,10 +9,8 @@ import { Favs } from "./pages/Favs";
 import { User } from "./pages/User";
 import { NotRegisteredUser } from "./pages/NotRegisteredUser";
 import { Navbar } from "./components/NavBar";
+import Context from "./Context";
 
-const UserLogged = ({ children }) => {
-  return children({ isAuth: false });
-};
 export const App = () => {
   return (
     <>
@@ -24,7 +22,7 @@ export const App = () => {
           <Route exact path="/pet/:categoryId" component={Home} />
           <Route exact path="/detail/:detailId" component={Detail} />
         </Switch>
-        <UserLogged>
+        <Context.Consumer>
           {({ isAuth }) =>
             isAuth ? (
               <Switch>
@@ -38,7 +36,7 @@ export const App = () => {
               </Switch>
             )
           }
-        </UserLogged>
+        </Context.Consumer>
         <Navbar />
       </BrowserRouter>
     </>
