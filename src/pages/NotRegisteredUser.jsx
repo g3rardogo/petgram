@@ -2,28 +2,44 @@ import React from "react";
 import Context from "../Context";
 import { UserForm } from "../components/UserForm";
 import { RegisterMutation } from "../containers/RegisterMutation";
+import { LoginMutation } from "../containers/LoginMutation";
 
 export const NotRegisteredUser = () => {
-  const { mutation, mutationLoading, mutationError } = RegisterMutation();
+  const { registerMutation, registerMutationLoading, registerMutationError } =
+    RegisterMutation();
+  const { loginMutation, loginMutationLoading, loginMutationError } =
+    LoginMutation();
   return (
     <Context.Consumer>
       {({ activateAuth }) => {
-        const onSubmit = ({ email, password }) => {
+        const onSubmitRegister = ({ email, password }) => {
           const input = { email, password };
           const variables = { input };
-          mutation({ variables }).then(activateAuth);
+          registerMutation({ variables }).then(activateAuth);
         };
-        const errorMsg =
-          mutationError && "El usuario ya existe o hay algun problema.";
+        const onSubmitLogin = ({ email, password }) => {
+          const input = { email, password };
+          const variables = { input };
+          loginMutation({ variables }).then(activateAuth);
+        };
+        const registerErrorMsg =
+          registerMutationError && "El usuario ya existe o hay algun problema.";
+        const loginErrorMsg =
+          loginMutationError && "Usuario o contrasena incorrectos";
         return (
           <>
             <UserForm
-              onSubmit={onSubmit}
-              disabled={mutationLoading}
-              error={errorMsg}
+              onSubmit={onSubmitRegister}
+              disabled={registerMutationLoading}
+              error={registerErrorMsg}
               title="Registrarse"
             />
-            <UserForm onSubmit={activateAuth} title="Iniciar Sesion" />
+            <UserForm
+              onSubmit={onSubmitLogin}
+              disabled={loginMutationLoading}
+              error={loginErrorMsg}
+              title="Iniciar Sesion"
+            />
           </>
         );
       }}

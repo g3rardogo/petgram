@@ -8,7 +8,9 @@ const MUTATION_REGISTER = gql`
 `;
 
 export const RegisterMutation = () => {
-  const [mutation, { loading: mutationLoading, error: mutationError }] =
-    useMutation(MUTATION_REGISTER);
-  return { mutation, mutationLoading, mutationError };
+  const [
+    registerMutation,
+    { loading: registerMutationLoading, error: registerMutationError },
+  ] = useMutation(MUTATION_REGISTER);
+  return { registerMutation, registerMutationLoading, registerMutationError };
 };
