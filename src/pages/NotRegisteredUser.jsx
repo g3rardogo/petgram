@@ -28,6 +28,7 @@ export const NotRegisteredUser = () => {
       activateAuth(login);
     });
   };
+
   const registerErrorMsg =
     registerMutationError && "El usuario ya existe o hay algun problema.";
   const loginErrorMsg =
