@@ -33,7 +33,7 @@ const errorMiddleware = onError(({ networkError }) => {
   }
 });
 
-const client = new ApolloClient({
+export const client = new ApolloClient({
   cache: new InMemoryCache(),
   link: from([
     errorMiddleware,
