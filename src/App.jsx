@@ -1,20 +1,20 @@
-import React, { useContext } from "react";
+import React, { Suspense } from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { GlobalStyle } from "./styles/GlobalStyle";
 import { Logo } from "./components/Logo";
-import { PhotoCardWithQuery } from "./containers/PhotoCardWithQuery";
 import { Home } from "./pages/Home";
 import { Detail } from "./pages/Detail";
-import { Favs } from "./pages/Favs";
 import { User } from "./pages/User";
 import { NotRegisteredUser } from "./pages/NotRegisteredUser";
 import { Navbar } from "./components/NavBar";
 import Context from "./Context";
 import { NotFound } from "./pages/NotFound";
 
+const Favs = React.lazy(() => import("./pages/Favs"));
+
 export const App = () => {
   return (
-    <>
+    <Suspense fallback={<div />}>
       <GlobalStyle />
       <BrowserRouter>
         <Logo />
@@ -38,6 +38,6 @@ export const App = () => {
         </Context.Consumer>
         <Navbar />
       </BrowserRouter>
-    </>
+    </Suspense>
   );
 };
