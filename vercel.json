@@ -13,6 +13,9 @@
             "src": "(.*).jsx", "dest": "/$1.jsx"
         },
         {
+            "src": "(.*).png", "dest": "/$1.png"
+        },
+        {
             "src": "(.*).json", "dest": "/$1.json"
         },
         {
