@@ -1,25 +1,46 @@
 import styled from "styled-components";
+import { Link as LinkRouter } from "react-router-dom";
 
 export const Form = styled.form`
-  padding: 16px 0;
+  padding: 16px 24px;
 `;
 
 export const Input = styled.input`
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  margin-bottom: 8px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 26px;
   padding: 8px 4px;
   display: block;
   width: 100%;
+  &:focus {
+    outline: none;
+  }
   &[disabled] {
     opacity: 0.3;
   }
 `;
 
-export const Title = styled.h2`
-  font-size: 16px;
+export const Title = styled.h1`
+  color: #0095f6;
+  font-size: 40px;
   font-weight: 500;
   padding: 8px 0;
+`;
+
+export const Subtitle = styled.h2`
+  font-size: 24px;
+  color: #23252787;
+  margin-bottom: 64px;
+`;
+
+export const Text = styled.p`
+  margin-top: 256px;
+  text-align: center;
+`;
+
+export const Link = styled(LinkRouter)`
+  text-decoration: none;
+  color: #0095f6;
 `;
 
 export const Error = styled.span`

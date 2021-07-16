@@ -2,10 +2,10 @@ import React from "react";
 import { Button } from "./styles";
 import PropTypes from "prop-types";
 
-export const SubmitButton = ({ children, onClick, disabled }) => {
+export const SubmitButton = ({ action, onClick, disabled }) => {
   return (
     <Button onClick={onClick} disabled={disabled}>
-      {children}
+      {action}
     </Button>
   );
 };

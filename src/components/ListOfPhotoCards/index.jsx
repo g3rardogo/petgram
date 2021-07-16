@@ -1,4 +1,5 @@
 import React from "react";
+import { List } from "./styles";
 import { gql, useQuery } from "@apollo/client";
 import { PhotoCard } from "../PhotoCard";
 
@@ -24,10 +25,10 @@ export const ListOfPhotoCards = ({ categoryId }) => {
   if (error) return <p>Error</p>;
 
   return (
-    <ul>
+    <List>
       {data.photos.map((photoCard) => (
         <PhotoCard key={photoCard.id} {...photoCard} />
       ))}
-    </ul>
+    </List>
   );
 };

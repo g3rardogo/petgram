@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const List = styled.ul`
+  padding-left: 14px;
   display: flex;
   overflow: scroll;
   width: 100%;

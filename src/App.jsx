@@ -5,10 +5,11 @@ import { Logo } from "./components/Logo";
 import { Home } from "./pages/Home";
 import { Detail } from "./pages/Detail";
 import { User } from "./pages/User";
-import { NotRegisteredUser } from "./pages/NotRegisteredUser";
+import { RegisterUser } from "./pages/RegisterUser";
 import { Navbar } from "./components/NavBar";
 import Context from "./Context";
 import { NotFound } from "./pages/NotFound";
+import { LoginUser } from "./pages/LoginUser";
 
 const Favs = React.lazy(() => import("./pages/Favs"));
 
@@ -24,12 +25,15 @@ export const App = () => {
               <Route exact path="/" component={Home} />
               <Route exact path="/pet/:categoryId" component={Home} />
               <Route exact path="/detail/:detailId" component={Detail} />
+              {!isAuth && <Redirect from="/favs" to="/register" />}
+              {!isAuth && <Redirect from="/user" to="/register" />}
+              {isAuth && <Redirect from="/register" to="/" />}
               {!isAuth && (
-                <Route exact path="/login" component={NotRegisteredUser} />
+                <>
+                  <Route exact path="/register" component={RegisterUser} />
+                  <Route exact path="/login" component={LoginUser} />
+                </>
               )}
-              {!isAuth && <Redirect from="/favs" to="/login" />}
-              {!isAuth && <Redirect from="/user" to="/login" />}
-              {isAuth && <Redirect from="/login" to="/" />}
               <Route exact path="/favs" component={Favs} />
               <Route exact path="/user" component={User} />
               <Route component={NotFound} />
