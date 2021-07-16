@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { flipDown } from "../../styles/animation";
 
 export const List = styled.ul`
   padding-left: 14px;
@@ -11,6 +12,7 @@ export const List = styled.ul`
   ${(props) =>
     props.fixed &&
     css`
+      ${flipDown({ time: "1.5s" })}
       background: #fff;
       border-radius: 60px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);

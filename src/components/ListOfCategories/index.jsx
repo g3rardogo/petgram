@@ -49,10 +49,5 @@ export const ListOfCategories = () => {
       )}
     </List>
   );
-  return (
-    <>
-      {renderList()}
-      {showFixed && renderList(true)}
-    </>
-  );
+  return <>{showFixed ? renderList(true) : renderList()}</>;
 };
