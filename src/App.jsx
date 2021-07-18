@@ -3,7 +3,6 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { GlobalStyle } from "./styles/GlobalStyle";
 import { Logo } from "./components/Logo";
 import { Home } from "./pages/Home";
-import { Detail } from "./pages/Detail";
 import { User } from "./pages/User";
 import { RegisterUser } from "./pages/RegisterUser";
 import { Navbar } from "./components/NavBar";
@@ -24,7 +23,6 @@ export const App = () => {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/pet/:categoryId" component={Home} />
-              <Route exact path="/detail/:detailId" component={Detail} />
               {!isAuth && <Redirect from="/favs" to="/register" />}
               {!isAuth && <Redirect from="/user" to="/register" />}
               {isAuth && <Redirect from="/register" to="/" />}

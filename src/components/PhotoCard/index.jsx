@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Article, ImgWrapper, Img } from "./styles";
 import { useNearScreen } from "../../hooks/useNearScreen";
 import { FavButton } from "../FavButton";
@@ -24,11 +23,9 @@ export const PhotoCard = ({ id, liked, likes = 0, src = DEFAULT_IMAGE }) => {
     <Article ref={ref}>
       {show && (
         <>
-          <Link to={`/detail/${id}`}>
-            <ImgWrapper>
-              <Img src={src} />
-            </ImgWrapper>
-          </Link>
+          <ImgWrapper>
+            <Img src={src} />
+          </ImgWrapper>
           <FavButton liked={liked} likes={likes} onClick={handleFavClick} />
         </>
       )}
