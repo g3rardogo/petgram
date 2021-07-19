@@ -37,3 +37,26 @@ export const flipDown = ({ time = "3s" } = {}) =>
   css`
     animation: ${time} ${flipDownKeyframes};
   `;
+
+const motionKeyFrames = keyframes`
+  0% {
+      transform: translateX(0) scale(1);
+    }
+    25% {
+      transform: translateX(-50px) scale(0.3);
+    }
+    50% {
+      transform: translateX(0) scale(1);
+    }
+    75% {
+      transform: translateX(50px) scale(0.3);
+    }
+    100% {
+      transform: translateX(0) scale(1);
+    }
+`;
+
+export const motion = ({ time = "3s" } = {}) =>
+  css`
+    animation: ${time} ${motionKeyFrames} infinite;
+  `;

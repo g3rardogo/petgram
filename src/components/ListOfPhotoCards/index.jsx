@@ -1,5 +1,6 @@
 import React from "react";
 import { List } from "./styles";
+import { Loader } from "../Loader";
 import { gql, useQuery } from "@apollo/client";
 import { PhotoCard } from "../PhotoCard";
 
@@ -21,7 +22,7 @@ export const ListOfPhotoCards = ({ categoryId }) => {
     variables: { categoryId },
   });
 
-  if (loading) return <span>loading</span>;
+  if (loading) return <Loader />;
   if (error) return <p>Error</p>;
 
   return (
