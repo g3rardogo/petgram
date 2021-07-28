@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Div, Title, Subtitle } from "./styles";
+import { Div, Title } from "./styles";
 
 export const Layout = ({ children, title, subtitle }) => {
   return (
@@ -11,7 +11,6 @@ export const Layout = ({ children, title, subtitle }) => {
       </Helmet>
       <Div>
         {title && <Title>{title}</Title>}
-        {subtitle && <Subtitle>{subtitle}</Subtitle>}
         {children}
       </Div>
     </>

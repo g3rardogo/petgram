@@ -34,7 +34,7 @@ export const Subtitle = styled.h2`
 `;
 
 export const Text = styled.p`
-  margin-top: 256px;
+  margin-top: 24px;
   text-align: center;
 `;
 

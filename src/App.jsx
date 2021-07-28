@@ -3,14 +3,14 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { GlobalStyle } from "./styles/GlobalStyle";
 import { Logo } from "./components/Logo";
 import { Home } from "./pages/Home";
-import { User } from "./pages/User";
 import { RegisterUser } from "./pages/RegisterUser";
 import { Navbar } from "./components/NavBar";
-import Context from "./Context";
-import { NotFound } from "./pages/NotFound";
 import { LoginUser } from "./pages/LoginUser";
+import Context from "./Context";
 
 const Favs = React.lazy(() => import("./pages/Favs"));
+const User = React.lazy(() => import("./pages/User"));
+const NotFound = React.lazy(() => import("./pages/NotFound"));
 
 export const App = () => {
   return (

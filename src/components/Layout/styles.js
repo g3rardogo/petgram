@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const Div = styled.div`
+  text-align: center;
   padding: 16px;
 `;
 export const Title = styled.h1`
-  font-size: 24px;
-  font-weight: 600;
-  color: #222;
-  padding-bottom: 8px;
+  text-align: left;
+  font-size: 32px;
+  font-weight: 500;
+  border-bottom: 1px ridge #b3a9a98c;
 `;
 export const Subtitle = styled.h2`
   font-size: 16px;

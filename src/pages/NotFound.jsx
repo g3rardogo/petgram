@@ -1,5 +1,5 @@
 import React from "react";
 
-export const NotFound = () => {
+export default () => {
   return <h1>Esta pagina no existe</h1>;
 };

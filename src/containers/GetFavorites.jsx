@@ -1,6 +1,8 @@
 import React from "react";
+import { Loader } from "../components/Loader";
 import { useQuery, gql } from "@apollo/client";
 import { ListOfFavs } from "../components/ListOfFavs";
+import { NoFavorites } from "../components/NoFavorites";
 
 const GET_FAVORITES = gql`
   query getFavs {
@@ -22,8 +24,12 @@ export const GetFavorites = () => {
     return <h2>Internal Server Error</h2>;
   }
   if (loading) {
-    return <h2>Loading...</h2>;
+    return <Loader />;
   }
   const { favs } = data;
-  return <ListOfFavs favs={favs} />;
+  if (favs.length !== 0) {
+    return <ListOfFavs favs={favs} />;
+  } else {
+    return <NoFavorites />;
+  }
 };
