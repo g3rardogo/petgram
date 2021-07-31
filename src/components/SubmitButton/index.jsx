@@ -3,6 +3,7 @@ import { Button } from "./styles";
 import PropTypes from "prop-types";
 
 export const SubmitButton = ({ action, onClick, disabled }) => {
+  console.log(disabled);
   return (
     <Button onClick={onClick} disabled={disabled}>
       {action}
@@ -11,7 +12,11 @@ export const SubmitButton = ({ action, onClick, disabled }) => {
 };
 
 SubmitButton.propTypes = {
-  disabled: PropTypes.bool,
+  disabled: PropTypes.bool.isRequired,
   onClick: PropTypes.func,
-  children: PropTypes.node.isRequired,
+  action: PropTypes.node.isRequired,
+};
+
+SubmitButton.defaultProps = {
+  disabled: false,
 };

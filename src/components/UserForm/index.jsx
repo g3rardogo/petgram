@@ -2,6 +2,7 @@ import React from "react";
 import { useInputValue } from "../../hooks/useInputValue";
 import { Form, Input, Title, Subtitle, Text, Link, Error } from "./styles";
 import { SubmitButton } from "../SubmitButton";
+import PropType from "prop-types";
 
 export const UserForm = ({
   onSubmit,
@@ -41,4 +42,15 @@ export const UserForm = ({
       {error && <Error>{error}</Error>}
     </>
   );
+};
+
+UserForm.propType = {
+  onSubmit: PropType.func.isRequired,
+  title: PropType.string.isRequired,
+  subtitle: PropType.string.isRequired,
+  action: PropType.string.isRequired,
+  question: PropType.string.isRequired,
+  page: PropType.string.isRequired,
+  redirect: PropType.string.isRequired,
+  disabled: PropType.bool.isRequired,
 };

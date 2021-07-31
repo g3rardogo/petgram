@@ -3,6 +3,7 @@ import { List } from "./styles";
 import { Loader } from "../Loader";
 import { gql, useQuery } from "@apollo/client";
 import { PhotoCard } from "../PhotoCard";
+import PropTypes from "prop-types";
 
 const GET_PHOTOS = gql`
   query getPhotos($categoryId: ID) {
@@ -32,4 +33,8 @@ export const ListOfPhotoCards = ({ categoryId }) => {
       ))}
     </List>
   );
+};
+
+ListOfPhotoCards.propTypes = {
+  categoryId: PropTypes.number.isRequired,
 };
