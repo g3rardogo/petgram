@@ -4,5 +4,5 @@ export const Image = styled.img`
   display: inherit;
   width: 100%;
   max-width: 150px;
-  margin: 75px auto;
+  margin: 50px auto 0;
 `;

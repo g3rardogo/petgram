@@ -10,7 +10,7 @@ export default () => {
   return (
     <Title title="Perfil">
       <ImageContainer src={UserImage} />
-      <h3 style={{ textAlign: "center" }}>User</h3>
+      <h3 style={{ textAlign: "center", marginTop: "50px" }}>User</h3>
       <SubmitButton action={"Cerrar Sesion"} onClick={removeAuth} />
     </Title>
   );
