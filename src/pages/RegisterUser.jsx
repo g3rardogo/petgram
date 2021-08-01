@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../Context";
 import { UserForm } from "../components/UserForm";
 import { RegisterMutation } from "../containers/RegisterMutation";
+import { HelmetLayout } from "../components/HelmetLayout";
 
 export const RegisterUser = () => {
   const { activateAuth } = useContext(Context);
@@ -21,7 +22,7 @@ export const RegisterUser = () => {
     registerMutationError && "El usuario ya existe o hay algun problema.";
 
   return (
-    <>
+    <HelmetLayout title="Registro" subtitle="Registro de usuario nuevo">
       <UserForm
         onSubmit={onSubmitRegister}
         disabled={registerMutationLoading}
@@ -33,6 +34,6 @@ export const RegisterUser = () => {
         page="Sign In"
         redirect="/login"
       />
-    </>
+    </HelmetLayout>
   );
 };

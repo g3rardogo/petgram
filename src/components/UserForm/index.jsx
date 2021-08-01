@@ -38,8 +38,8 @@ export const UserForm = ({
         <Text>
           {question} <Link to={redirect}>{page}</Link>
         </Text>
+        {error && <Error>{error}</Error>}
       </Form>
-      {error && <Error>{error}</Error>}
     </>
   );
 };

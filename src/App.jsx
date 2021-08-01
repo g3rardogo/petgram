@@ -26,11 +26,13 @@ export const App = () => {
               {!isAuth && <Redirect from="/favs" to="/register" />}
               {!isAuth && <Redirect from="/user" to="/register" />}
               {isAuth && <Redirect from="/register" to="/" />}
+              {isAuth && <Redirect from="/login" to="/" />}
               {!isAuth && (
-                <>
+                <Switch>
                   <Route exact path="/register" component={RegisterUser} />
                   <Route exact path="/login" component={LoginUser} />
-                </>
+                  <Route component={NotFound} />
+                </Switch>
               )}
               <Route exact path="/favs" component={Favs} />
               <Route exact path="/user" component={User} />
