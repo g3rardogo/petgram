@@ -3,6 +3,7 @@ import { Link as LinkRouter } from "react-router-dom";
 
 export const Form = styled.form`
   padding: 16px 24px;
+  margin-bottom: 50px;
 `;
 
 export const Input = styled.input`

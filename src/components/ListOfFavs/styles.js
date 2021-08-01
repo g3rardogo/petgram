@@ -18,6 +18,7 @@ export const Link = styled(LinkRouter)`
 
 export const Grid = styled.div`
   padding: 32px 16px 0;
+  margin-bottom: 50px;
 `;
 
 export const Image = styled.img`
