@@ -30,11 +30,11 @@ export const LoginUser = () => {
         onSubmit={onSubmitLogin}
         disabled={loginMutationLoading}
         error={loginErrorMsg}
-        title="Welcome!"
-        subtitle="Sign in to continue"
-        action="LOGIN"
-        question="Don't have an account?"
-        page="Sign up"
+        title="Bienvenido!"
+        subtitle="Inicia sesión para continuar"
+        action="Iniciar sesión"
+        question="¿No tienes una cuenta?"
+        page="Registrarte"
         redirect="/register"
       />
     </HelmetLayout>

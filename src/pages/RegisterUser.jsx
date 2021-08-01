@@ -27,11 +27,11 @@ export const RegisterUser = () => {
         onSubmit={onSubmitRegister}
         disabled={registerMutationLoading}
         error={registerErrorMsg}
-        title="Hi!"
-        subtitle="Create a new account"
-        action="SIGN UP"
-        question="Already have an account?"
-        page="Sign In"
+        title="Hola!"
+        subtitle="Crea una cuenta nueva"
+        action="Registrarme"
+        question="¿Ya tienes una cuenta?"
+        page="Iniciar sesión"
         redirect="/login"
       />
     </HelmetLayout>
