@@ -24,7 +24,7 @@ export const PhotoCard = ({ id, liked, likes = 0, src = DEFAULT_IMAGE }) => {
       {show && (
         <>
           <ImgWrapper>
-            <Img src={src} />
+            <Img src={src} alt="Animal image" />
           </ImgWrapper>
           <FavButton liked={liked} likes={likes} onClick={handleFavClick} />
         </>

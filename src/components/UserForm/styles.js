@@ -35,6 +35,7 @@ export const Subtitle = styled.h2`
 
 export const Text = styled.p`
   margin-top: 24px;
+  margin-bottom: 24px;
   text-align: center;
 `;
 
@@ -43,7 +44,9 @@ export const Link = styled(LinkRouter)`
   color: #0095f6;
 `;
 
-export const Error = styled.span`
+export const Error = styled.p`
+  text-align: center;
+  font-weight: 500;
   color: red;
   font-size: 14px;
 `;

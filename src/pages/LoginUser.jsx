@@ -19,7 +19,7 @@ export const LoginUser = () => {
   };
 
   const loginErrorMsg =
-    loginMutationError && "Usuario o contrasena incorrectos";
+    loginMutationError && "🚨 Usuario o contraseña incorrectos";
 
   return (
     <HelmetLayout

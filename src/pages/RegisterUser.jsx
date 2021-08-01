@@ -19,7 +19,7 @@ export const RegisterUser = () => {
   };
 
   const registerErrorMsg =
-    registerMutationError && "El usuario ya existe o hay algun problema.";
+    registerMutationError && "🚨 El usuario ya existe o hay algún problema.";
 
   return (
     <HelmetLayout title="Registro" subtitle="Registro de usuario nuevo">
