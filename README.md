@@ -65,9 +65,9 @@ Users are able to:
 
 ### Useful resources
 
-- [An Introduction to CSS-in-JS](https://webdesign.tutsplus.com/articles/an-introduction-to-css-in-js-examples-pros-and-cons--cms-33574) - Nice article to give you a overview of CSS-in-JS libraries with examples. 🖋
+- [An Introduction to CSS-in-JS](https://webdesign.tutsplus.com/articles/an-introduction-to-css-in-js-examples-pros-and-cons--cms-33574) - Nice article to give you an overview of CSS-in-JS libraries with examples. 🖋
 - [React SEO: The Best Optimization Methods for React Websites](https://zeo.org/blog/react-seo-the-best-optimization-methods-for-react-websites/) - Learn how React can be compatible with SEO. 🔍
-- [End-to-End Testing with Cypress for React Applications](https://www.codewithlinda.com/blog/test-react-apps-with-cypress/) - This helped me to start End-to-End tests with Cypress. 🧪
+- [End-to-End Testing with Cypress for React Applications](https://www.codewithlinda.com/blog/test-react-apps-with-cypress/) - This helped me to start End-to-End tests with Cypress. A new world discovered here. 🧪
 - [How to set up lazy loading components in React](https://medium.com/@muratcatal/lazy-loading-in-react-2a43ea2b2dd1) - Interesting article about React.lazy function and Suspense component. 🧐
 
 ## Author 🐱‍👤
