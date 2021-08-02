@@ -54,13 +54,13 @@ Users are able to:
 
 ### What I learned
 
-📌 Lazy Load with Intersection Observer.
-📌 Local Storage usage.
-📌 Persistent data with Session Storage.
-📌 Improve SEO in React with React Helmet.
-📌 React.lazy() and Suspense component.
-📌 Progressive Web App with Workbox
-📌 End-to-End test with Cypress
+📌 Lazy Load with Intersection Observer.<br/>
+📌 Local Storage usage.<br/>
+📌 Persistent data with Session Storage.<br/>
+📌 Improve SEO in React with React Helmet.<br/>
+📌 React.lazy() and Suspense component.<br/>
+📌 Progressive Web App with Workbox.<br/>
+📌 End-to-End test with Cypress.<br/>
 
 ### Useful resources
 
