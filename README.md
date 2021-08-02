@@ -1,12 +1,13 @@
-# Petgram
+# Petgram 🐶
 
-Instagram for pets. Built with React.
+Instagram for pets. Progressive Web App built with React.
 
 [![wakatime](https://wakatime.com/badge/github/g3rardogo/petgram.svg)](https://wakatime.com/badge/github/g3rardogo/petgram)
+<br/>
 
 ![](./screenshot.png)
 
-## Table of contents
+## Table of contents 📑
 
 - [Overview](#overview)
   - [The project](#the-project)
@@ -17,7 +18,7 @@ Instagram for pets. Built with React.
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-## Overview
+## Overview 🔎
 
 ### The project
 
@@ -32,9 +33,9 @@ Users are able to:
 
 ### Links
 
-- Live Site URL: 📌 [Here](https://petgram-g3rardogo.netlify.app/)
+- 📌 Live Site URL: [Here](https://petgram-g3rardogo.netlify.app/)
 
-## My process
+## My process 👨‍💻
 
 ### Built with
 
@@ -64,12 +65,12 @@ Users are able to:
 
 ### Useful resources
 
-- [An Introduction to CSS-in-JS](https://webdesign.tutsplus.com/articles/an-introduction-to-css-in-js-examples-pros-and-cons--cms-33574) - Nice article to give you a overview of CSS-in-JS libraries with examples. 🎨
+- [An Introduction to CSS-in-JS](https://webdesign.tutsplus.com/articles/an-introduction-to-css-in-js-examples-pros-and-cons--cms-33574) - Nice article to give you a overview of CSS-in-JS libraries with examples. 🖋
 - [React SEO: The Best Optimization Methods for React Websites](https://zeo.org/blog/react-seo-the-best-optimization-methods-for-react-websites/) - Learn how React can be compatible with SEO. 🔍
-- [End-to-End Testing with Cypress for React Applications](https://www.codewithlinda.com/blog/test-react-apps-with-cypress/) - This helped me to start End-to-End tests with Cypress.
-- [How to set up lazy loading components in React](https://medium.com/@muratcatal/lazy-loading-in-react-2a43ea2b2dd1) - Interesting article about React.lazy function and Suspense component.
+- [End-to-End Testing with Cypress for React Applications](https://www.codewithlinda.com/blog/test-react-apps-with-cypress/) - This helped me to start End-to-End tests with Cypress. 🧪
+- [How to set up lazy loading components in React](https://medium.com/@muratcatal/lazy-loading-in-react-2a43ea2b2dd1) - Interesting article about React.lazy function and Suspense component. 🧐
 
-## Author
+## Author 🐱‍👤
 
 - Website - https://gerardoramirez.netlify.app/
 - Twitter - [@g3rardogo](https://twitter.com/g3rardogo)
