@@ -63,7 +63,7 @@ module.exports = {
         },
       },
       {
-        test: /\.png/,
+        test: /\.(png|ico)/,
         type: "asset/resource",
       },
     ],
